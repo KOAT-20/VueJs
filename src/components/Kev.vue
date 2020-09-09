@@ -21,4 +21,11 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  color: grey;
+}
+
+div. h4 {
+  color: blue;
+}
 </style>

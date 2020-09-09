@@ -3,6 +3,12 @@
     <h2>Datos {{title}}</h2>
     <h3>Your name is {{user.name}} {{user.last}}!</h3>
     <div v-html='custom' />
+    <hr />
+    <input type='text' v-model='user.name'>
+    <button type='button'
+      v-on:click='hola(user.name)'
+    >
+      Saludar</button>
   </div>
 </template>
 
@@ -16,7 +22,12 @@ export default {
       last: 'Torres'
     },
     custom: '<h4>Custom</h4>'
-  })
+  }),
+  methods: {
+    hola (name) {
+      alert(`Hola ${name}`);
+    }
+  }
 }
 </script>
 

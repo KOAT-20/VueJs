@@ -5,10 +5,7 @@
     <div v-html='custom' />
     <hr />
     <input type='text' v-model='user.name'>
-    <button type='button'
-      v-on:click='hola(user.name)'
-    >
-      Saludar</button>
+    <button type='button'v-on:click='saludo(user.name)'  >Saludar</button>
   </div>
 </template>
 
@@ -24,7 +21,7 @@ export default {
     custom: '<h4>Custom</h4>'
   }),
   methods: {
-    hola (name) {
+    saludo (name) {
       alert(`Hola ${name}`);
     }
   }
